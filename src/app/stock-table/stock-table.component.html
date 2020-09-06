@@ -1,0 +1,11 @@
+<table class="table table-hover">
+
+    <tr *ngFor="let symbol of stockService.symbols">
+      
+      <td>{{ symbol.symbol }}</td>
+      <td>{{ symbol.price }}</td>
+      <td>{{ symbol.size }}</td>
+      <td>{{ symbol.time }}</td>
+      <td><button (click)="onDelete(symbol.symbol)" class="btn btn-sm btn-outline-danger">X</button></td>
+    </tr>
+  </table>

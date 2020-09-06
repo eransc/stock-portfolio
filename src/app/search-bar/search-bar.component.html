@@ -1,0 +1,17 @@
+<form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off" novalidate>
+  <!-- <input type="hidden" name="SymbolID" #SymbolID="ngModel" [(ngModel)]="SymbolID"/> -->
+  <div class="form-group">
+    <label for="">SymbolID</label>
+    <input name="SymbolID" #SymbolID="ngModel" type="text" [(ngModel)]="this.search" />
+  </div>
+
+  <div class="form-group">
+    <button
+      type="submit"
+      [disabled]="form.invalid"
+      class="btn btn-lg btn-block"
+    >
+      Submit
+    </button>
+  </div>
+</form>
